@@ -351,36 +351,6 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
-                        <systemPropertyVariables>
-                            <java.awt.headless>true</java.awt.headless>
-                        </systemPropertyVariables>
-                        <includes>
-                            <include>**/*Test.class</include>
-                            <include>**/Test*.class</include>
-                            <include>**/*Spec.class</include>
-                        </includes>
-                        <excludes>
-                            <exclude>**/*ITSpec.class</exclude>
-                        </excludes>
-                        <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                        <argLine combine.children="append">-Xmx1G
-                            -Djava.net.preferIPv4Stack=true
-                            ${maven.surefire.arguments}
-                            -Dfile.encoding=UTF-8</argLine>
-                    </configuration>
-                    <dependencies>
-                        <dependency>
-                            <!-- Force surefire to use JUnit -->
-                            <groupId>org.apache.maven.surefire</groupId>
-                            <artifactId>surefire-junit4</artifactId>
-                            <version>${surefire.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <configuration>
                         <tarLongFileMode>gnu</tarLongFileMode>
