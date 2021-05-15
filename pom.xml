@@ -22,8 +22,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>nifi-clickhouse-bundle</module>
-        <module>nifi-distribute-bundle</module>
+        <module>nifi</module>
     </modules>
 
 </project>
